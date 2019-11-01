@@ -1,22 +1,66 @@
-:root{
+:root {
     --blue:(blue);
+    --green:(green);
 }
 
-body{
-    background-color: aqua;
-    margin: 0;
-    padding: 0;
+html {
     box-sizing: border-box;
+    font-weight: 700;
+    color: var(--black);
+    font-family: sans-serif;
 }
 
-div{
-    height:200px;
+div {
+    height:100px;
     width: 200%;
     box-sizing: border-box;
     padding: 10px;
 }
 
-.main{
+.main {
     color: white;
     background-color: black;
+}
+
+.top {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    top: 20%;
+}
+
+.logo-box {
+    position: absolute;
+    top: 20%;
+    left: 15%;
+}
+
+.logo {
+    height: 100px;
+}
+
+.button {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    padding: 1rem;
+    margin: 2rem;
+    border: 1px solid #fff;
+    opacity: 0;
+    animation-name: Button;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    transition-property: transform;
+    transition-duration: 1s;
+    text-transform: uppercase;
+}
+
+
+.btn:hover{
+    transform: rotateY(360deg);
+}
+
+@keyframes Button{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
 }
